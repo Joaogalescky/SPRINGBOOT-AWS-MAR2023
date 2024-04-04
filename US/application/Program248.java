@@ -1,7 +1,8 @@
 package application;
 
 import java.util.Map;
-import java.util.TreeMap;
+import entities.Product;
+import java.util.HashMap;
 
 //Aula 248 - Map<K,V> - Demo 1
 public class Program248 {
@@ -9,24 +10,23 @@ public class Program248 {
 
     public static void main(String[] args) {
 
-        Map<String, String> cookies = new TreeMap<>();
+        Map<Product, Double> stock = new HashMap<>();
 
-        cookies.put("username", "Maria");
-        cookies.put("email", "Maria@gmail.com");
-        cookies.put("phone", "99711122");
+        Product p1 = new Product("TV", 900.00);
+        Product p2 = new Product("Notebook", 1200.00);
+        Product p3 = new Product("Tablet", 400.00);
 
-        cookies.remove("email");
-        cookies.put("phone", "99771133"); //vai substituir o valour da key "phone" - 997711122 por 99771133, pois há esta passando a mesma key com um valour diferente
+        stock.put(p1, 10000.00);
+        stock.put(p2, 20000.00);
+        stock.put(p3, 15000.00);
 
-        System.out.println("==========================");
-        System.out.println("Contains 'phone' key: " + cookies.containsKey("phone"));
-        System.out.println("Phone number: " + cookies.get("phone"));
-        System.out.println("Email: " + cookies.get("email"));
-        System.out.println("Size: " + cookies.size());
+        /* Explicação
+         * Quando não há HashCode equals, o programa vai se orientar por comparação de ponteiros, logo, por haver 2 objetos diferentes, as referências dos ponteiros são diferentes, sendo por isso, que o retorna da saída sera "false"
+         * Tendo o HashCode equals inserido na classe Product, o código ira  comparar os valores Hash de cada item, mesmo sendo instancias diferentes, retornando "true" neste caso
+        */
 
-        System.out.println("ALL COOKIES:");
-        for(String key : cookies.keySet()) {
-            System.out.println(key + ": " + cookies.get(key));
-        }
+        Product ps = new Product("TV", 900.00);
+
+        System.out.println("COntains 'ps' key: " + stock.containsKey(ps));
     }
 }
