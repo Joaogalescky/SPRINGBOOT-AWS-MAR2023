@@ -5,23 +5,25 @@ import java.util.List;
 
 public class Program241 {
 
-
 	public static void main(String[] args) {
 
-		// Princípio get/put - covariância
+		// Princípio get/put - contravariância
 		/*
-		* Get - Ok
-		* put - Error
-		*/
+		 * Get - Error
+		 * put - Ok
+		 */
 
-		List<Integer> intList = new ArrayList<Integer>();
-		intList.add(10);
-		intList.add(5);
+		List<Object> myObjts = new ArrayList<Object>();
+		myObjts.add("Maria");
+		myObjts.add("Alex");
 
-		List<? extends Number> list = intList;
+		// Lista pode ser um tipo ou qualquer supertipo de Number
+		List<? super Number> myNums = myObjts;
 
-		Number x = list.get(0);
+		myNums.add(10);
+		myNums.add(3.14);
 
-		list.add(20); //erro de compilação
+		// Não podera acessar os objetos da lista, pois a lista pode ser um supertipo de Number
+		Number x = myNums.get(0); // erro de compilação
 	}
 }
