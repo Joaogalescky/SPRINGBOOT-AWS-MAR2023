@@ -12,7 +12,10 @@ public class Program244 {
          * A classe produtc não contem a implementacao do HashCode equals. Logo o Set
          * vai utilizar a referencia de ponteiros para equiparar as variaveis
          * Por serem instancias diferentes, a resposta vai ser "false"
-        */
+         */
+
+        // Para comparar o conteudo de uma váriavel, utiliza-se o HashCode equals na classe Product
+        // Apos isso, a saida dara como "true"
 
         Set<Product> set = new HashSet<>();
 
