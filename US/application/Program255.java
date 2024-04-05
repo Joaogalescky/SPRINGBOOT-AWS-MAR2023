@@ -17,7 +17,8 @@ public class Program255 {
 		list.add(new Product255("HD Case", 80.90));
 
 		//list.removeIf( p -> p.getPrice() >= 100);
-		list.removeIf(new ProductPredicate());
+		//list.removeIf(new ProductPredicate());
+		list.removeIf(Product255::staticProductPredicate);
 
 		for (Product255 p : list) {
 			System.out.println(p);
