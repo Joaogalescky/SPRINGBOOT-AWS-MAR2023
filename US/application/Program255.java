@@ -2,24 +2,24 @@ package application;
 
 import java.util.ArrayList;
 import java.util.List;
-import entities.Product;
+import entities.Product255;
 import util.ProductPredicate;
 
 public class Program255 {
 
 	public static void main(String[] args) {
 
-		List<Product> list = new ArrayList<>();
+		List<Product255> list = new ArrayList<>();
 
-		list.add(new Product("Tv", 900.00));
-		list.add(new Product("Mouse", 50.00));
-		list.add(new Product("Tablet", 350.50));
-		list.add(new Product("HD Case", 80.90));
+		list.add(new Product255("Tv", 900.00));
+		list.add(new Product255("Mouse", 50.00));
+		list.add(new Product255("Tablet", 350.50));
+		list.add(new Product255("HD Case", 80.90));
 
 		//list.removeIf( p -> p.getPrice() >= 100);
 		list.removeIf(new ProductPredicate());
 
-		for (Product p : list) {
+		for (Product255 p : list) {
 			System.out.println(p);
 		}
 	}
