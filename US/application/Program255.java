@@ -18,7 +18,8 @@ public class Program255 {
 
 		//list.removeIf( p -> p.getPrice() >= 100);
 		//list.removeIf(new ProductPredicate());
-		list.removeIf(Product255::staticProductPredicate);
+		//list.removeIf(Product255::staticProductPredicate);
+		list.removeIf(Product255::nonStaticProductPredicate);
 
 		for (Product255 p : list) {
 			System.out.println(p);
