@@ -1,13 +1,12 @@
 package Projeto.Xadres_Sistema.chess;
 
-public class ChessException extends RuntimeException{
-    
+import Projeto.Xadres_Sistema.boardgame.BoardException;
+
+public class ChessException extends BoardException {
+
     private static final long serialVersionUID = 1L;
 
-    public ChessException(String msg){
+    public ChessException(String msg) {
         super(msg);
     }
-
-    
-
 }
