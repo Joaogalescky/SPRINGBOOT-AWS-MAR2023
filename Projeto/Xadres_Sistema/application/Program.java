@@ -10,6 +10,8 @@ import Projeto.Xadres_Sistema.chess.ChessMatch;
 import Projeto.Xadres_Sistema.chess.ChessPiece;
 import Projeto.Xadres_Sistema.chess.ChessPosition;
 
+//Referência: https://github.com/acenelio/chess-system-java/tree/20d9828a14f11b81759aee7142177275522d58a5
+
 public class Program {
     public static void main(String[] args) {
 
@@ -38,11 +40,16 @@ public class Program {
                     captured.add(capturedPiece);
                 }
 
-				if (chessMatch.getPromoted() != null) {
-					System.out.print("Enter piece for promotion (B/N/R/Q): ");
-					String type = sc.nextLine();
-					chessMatch.replacePromotedPiece(type);
-				}
+                // Promoção
+                if (chessMatch.getPromoted() != null) {
+                    System.out.print("Enter piece for promotion (B/N/R/Q): ");
+                    String type = sc.nextLine().toUpperCase();
+                    while (!type.equals("B") && !type.equals("N") && !type.equals("R") & !type.equals("Q")) {
+                        System.out.print("Invalid value! Enter piece for promotion (B/N/R/Q): ");
+                        type = sc.nextLine().toUpperCase();
+                    }
+                    chessMatch.replacePromotedPiece(type);
+                }
 
             } catch (ChessException e) {
                 System.out.println(e.getMessage());
