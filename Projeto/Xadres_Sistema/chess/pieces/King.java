@@ -28,7 +28,7 @@ public class King extends ChessPiece {
 
         Position p = new Position(0, 0);
 
-        // mov para cima
+        // Mov para cima
         p.setValues(position.getRow() - 1, position.getColumn());
         if (getBoard().positionExists(p) && canMove(p)) {
             mat[p.getRow()][p.getColumn()] = true;
@@ -40,37 +40,37 @@ public class King extends ChessPiece {
             mat[p.getRow()][p.getColumn()] = true;
         }
 
-        // mov para esquerda
+        // Mov para esquerda
         p.setValues(position.getRow(), position.getColumn() - 1);
         if (getBoard().positionExists(p) && canMove(p)) {
             mat[p.getRow()][p.getColumn()] = true;
         }
 
-        // mov para direita
+        // Mov para direita
         p.setValues(position.getRow(), position.getColumn() + 1);
         if (getBoard().positionExists(p) && canMove(p)) {
             mat[p.getRow()][p.getColumn()] = true;
         }
 
-        // mov noroeste
+        // Mov noroeste
         p.setValues(position.getRow() - 1, position.getColumn() - 1);
         if (getBoard().positionExists(p) && canMove(p)) {
             mat[p.getRow()][p.getColumn()] = true;
         }
 
-        // mov nordeste
+        // Mov nordeste
         p.setValues(position.getRow() - 1, position.getColumn() + 1);
         if (getBoard().positionExists(p) && canMove(p)) {
             mat[p.getRow()][p.getColumn()] = true;
         }
 
-        // mov sudoeste
+        // Mov sudoeste
         p.setValues(position.getRow() + 1, position.getColumn() - 1);
         if (getBoard().positionExists(p) && canMove(p)) {
             mat[p.getRow()][p.getColumn()] = true;
         }
 
-        // mov sudeste
+        // Mov sudeste
         p.setValues(position.getRow() + 1, position.getColumn() + 1);
         if (getBoard().positionExists(p) && canMove(p)) {
             mat[p.getRow()][p.getColumn()] = true;
