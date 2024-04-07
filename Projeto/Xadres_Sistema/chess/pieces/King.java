@@ -28,49 +28,49 @@ public class King extends ChessPiece {
 		
 		Position p = new Position(0, 0);
 		
-		// above
+		// mov para cima
 		p.setValues(position.getRow() - 1, position.getColumn());
 		if (getBoard().positionExists(p) && canMove(p)) {
 			mat[p.getRow()][p.getColumn()] = true;
 		}
 
-		// below
+		// mov para baixo
 		p.setValues(position.getRow() + 1, position.getColumn());
 		if (getBoard().positionExists(p) && canMove(p)) {
 			mat[p.getRow()][p.getColumn()] = true;
 		}
 
-		// left
+		// mov para esquerda
 		p.setValues(position.getRow(), position.getColumn() - 1);
 		if (getBoard().positionExists(p) && canMove(p)) {
 			mat[p.getRow()][p.getColumn()] = true;
 		}
 
-		// right
+		// mov para direita
 		p.setValues(position.getRow(), position.getColumn() + 1);
 		if (getBoard().positionExists(p) && canMove(p)) {
 			mat[p.getRow()][p.getColumn()] = true;
 		}
 
-		// nw
+		// mov noroeste
 		p.setValues(position.getRow() - 1, position.getColumn() - 1);
 		if (getBoard().positionExists(p) && canMove(p)) {
 			mat[p.getRow()][p.getColumn()] = true;
 		}
 
-		// ne
+		// mov nordeste
 		p.setValues(position.getRow() - 1, position.getColumn() + 1);
 		if (getBoard().positionExists(p) && canMove(p)) {
 			mat[p.getRow()][p.getColumn()] = true;
 		}
 
-		// sw
+		// mov sudoeste
 		p.setValues(position.getRow() + 1, position.getColumn() - 1);
 		if (getBoard().positionExists(p) && canMove(p)) {
 			mat[p.getRow()][p.getColumn()] = true;
 		}
 		
-		// se
+		// mov sudeste
 		p.setValues(position.getRow() + 1, position.getColumn() + 1);
 		if (getBoard().positionExists(p) && canMove(p)) {
 			mat[p.getRow()][p.getColumn()] = true;
