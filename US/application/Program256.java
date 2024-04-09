@@ -17,7 +17,13 @@ public class Program256 {
 		list.add(new Product256("Tablet", 350.50));
 		list.add(new Product256("HD Case", 80.90));
 
-		list.forEach(Product::nonStaticPriceUpdate);
+		double factor = 1.1;
+
+		Consumer<Product256> cons = p -> {
+			p.setPrice(p.getPrice() * factor);
+		};
+
+		list.forEach(cons);
 
 		list.forEach(System.out::println);
 	}
