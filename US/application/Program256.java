@@ -17,7 +17,7 @@ public class Program256 {
 		list.add(new Product256("Tablet", 350.50));
 		list.add(new Product256("HD Case", 80.90));
 
-		list.forEach(new PriceUpdate());
+		list.forEach(Product256::staticPriceUpdate);
 
 		list.forEach(System.out::println);
 	}
