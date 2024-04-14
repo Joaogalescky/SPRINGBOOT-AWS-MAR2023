@@ -1,3 +1,5 @@
+package model.services;
+
 import java.util.List;
 import java.util.function.Predicate;
 import model.entities.Product;
