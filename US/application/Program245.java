@@ -1,5 +1,3 @@
-package application;
-
 import java.util.Set;
 import java.util.TreeSet;
 import entities.Product;

@@ -1,5 +1,3 @@
-package application;
-
 import java.util.Scanner;
 
 import services.PrintService;

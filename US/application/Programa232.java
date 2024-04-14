@@ -1,5 +1,3 @@
-package application;
-
 import model.entities.Circle;
 import model.entities.Rectangle;
 import model.enums.Color;

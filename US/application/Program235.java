@@ -1,9 +1,7 @@
-package application;
-
 import java.util.Scanner;
 import model.services.BrazilInterestService;
 import model.services.InterestService;
-import model.services.UsaInterestService;
+//import model.services.UsaInterestService;
 
 public class Program235 {
 

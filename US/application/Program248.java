@@ -1,5 +1,3 @@
-package application;
-
 import java.util.Map;
 import entities.Product;
 import java.util.HashMap;
